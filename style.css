@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 html, body{
+    /* --main: #4A90E2; */
+    --main: #0074E8;
+    /* --main: #466BB0; */
+    --second: black;
+    --base: #FCFDFF;
+    --highlight: #D9E7F8;
     height: 100%;
-    background: #FCFDFF;
-    /* background-image: url('stroke.svg');
+}
+
+body{
+    background: var(--base);
+    background-image: url('Background/ks.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; */
+    background-size: cover;
+    overflow: hidden;
 }
 
 .bold{
@@ -24,10 +34,6 @@ html, body{
 .left{
     float: left;
 }
-
-/* .shy {
-    opacity: .25;
-} */
 
 img {
   border-radius: 50%;
@@ -63,6 +69,7 @@ img {
 }
 
 .titleCard h1 {
+    color: var(--second);
     display: inline-block;
     font-size: 3.5em;
     line-height: 1em;
@@ -73,14 +80,7 @@ img {
 .titleCard h2 {
     display:inline-block;
     font-size: .6em;
-    /* border-radius: 5px; */
-    /* background-color: #D9E7F8; */
-    color: #4A90E2;
-    /* color: #0074E8; */
-    /* border: 0.5px solid #4A90E2; */
-    /* padding-left: 1.5em; */
-    /* padding-right: 1.5em; */
-    /* padding-top: 0.5em; */
+    color: var(--main);
     padding-bottom: 0.5em;
     margin: 0;
 }
@@ -96,20 +96,17 @@ a {
     text-align: center;
     margin-top: 3em;
     margin-bottom: 1em;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: space-around; */
-    /* padding: 0% 10% 0 10%; */
 }
 
 .socialButtonCard a {
+    color: var(--second);
     margin-left: 10px;
     margin-right: 10px;
     font-size: 30px;
 }
 
 .socialButtonCard a:active{
-    color: #0074E8;
+    color: var(--main);
 }
 
 /* Project */
@@ -122,12 +119,10 @@ a {
     display:inline-block;
     font-size: 1em;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: var(--base);
     color: black;
-    color: #4A90E2;
-    /* color: #215B9E ; */
-    /* color: #0074E8; */
-    border: 0.5px solid #4A90E2;
+    color: var(--main);
+    border: 1px solid var(--main);
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-top: 0.5em;
@@ -137,9 +132,18 @@ a {
 }
 
 .ProjectsCard button:hover {
-    background-color: #D9E7F8;
+    background-color: var(--highlight);
     transition: 0.1s;
 }
+
+
+
+/* #thing{
+    height: auto;
+    background: blue;
+    border-radius: 50%;
+} */
+
 
 @media only screen and (min-width: 400px) {
   /* For desktop: */
@@ -178,14 +182,15 @@ a {
   }
 
   .ProjectsCard button {
-      background-color: transparent;
-      color: #4A90E2;
+      background-color: var(--base);
+      color: var(--main);
+      /* color: #4A90E2; */
       margin: 0;
       width: 45%;
   }
 
   .socialButtonCard a:hover{
-      color: #0074E8;
+      color: var(--main);
       opacity: 1;
   }
 
@@ -198,23 +203,18 @@ a {
       transition: 0.2s;
   }
 
-  .right{
-      float: right;
-  }
-  .left{
-      float: left;
-  }
-
+}
+@media only screen and (min-width: 1200px) {
+    body{
+        background-size: contain;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     html, body{
-        background-color: #1A1A1B;
-        color: #FCFDFF;
-    }
-    .titleCard h2 {
-        /* background-color: #4A90E2;
-        color: #D9E7F8;
-        border: 0.5px solid #D9E7F8; */
+        /* --main: #466BB0; */
+        --second: white;
+        --base: #1A1A1B;
+        /* --highlight: #F8E6D9; */
     }
 }
