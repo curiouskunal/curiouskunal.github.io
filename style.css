@@ -12,7 +12,7 @@ html, body{
 
 body{
     background: var(--base);
-    background-image: url('Background/ks.png');
+    background-image: url('assets/ks.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
