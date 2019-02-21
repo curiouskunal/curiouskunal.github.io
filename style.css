@@ -204,7 +204,7 @@ a {
   }
 
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1110px) {
     body{
         background-size: contain;
     }
